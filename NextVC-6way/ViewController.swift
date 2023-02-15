@@ -33,8 +33,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    // 스토리보드로 뷰컨트롤러 만들어서 전달
-    // 스토리보드 간접세그로 연결 후 전달
     // 스토리보드 직접세그로 연결 후 전달
     // 클로저로 전달
     // 노티피케이션 전달
@@ -43,14 +41,34 @@ class ViewController: UIViewController {
     @IBAction func nextButtonsTapped(_ sender: UIButton) {
         switch sender.tag {
             
-            // 코드로 전달
+        // MARK: - 코드로 데이터 전달 및 화면 이동
         case Buttons.first.rawValue:
+            // FirstVC의 객체를 생성해줍니다.
             let firstVC = FirstViewController()
-            // 현재 텍스트 필드에 적혀있는 텍스트를 firstVC의 strData로 전달!
+            // 현재 텍스트 필드에 적혀있는 텍스트를 FirstVC의 strData로 전달!
             firstVC.strData = firstTextField.text
+            
             // 네이게이션의 push를 통한 화면 전환
             navigationController?.pushViewController(firstVC, animated: true)
             return
+            
+        // MARK: - 스토리보드로 뷰 컨트롤러를 만들어 화면 이동 및 데이터 전달
+        case Buttons.second.rawValue:
+            // 정해준 스토리보드의 Identifier를 사용하여 ViewController를 불러와 줍시다.
+            // 타입 캐스팅으로 UIViewController(구체적이지 않은 타입) -> SecondViewController 형변환을 해줘야 합니다.
+            guard let secondVC = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as? SecondViewController else { return }
+            
+            // 현재 텍스트 필드에 적혀있는 텍스트를 secondVC의 strData로 전달!
+            secondVC.strData = secondTextField.text
+            
+            // 네이게이션의 push를 통한 화면 전환
+            navigationController?.pushViewController(secondVC, animated: true)
+            return
+            
+        // MARK: - 스토리보드의 간접세그로 연결 후 화면 이동 및 데이터 전달
+        case Buttons.third.rawValue:
+            return
+
             
         default: break
         }

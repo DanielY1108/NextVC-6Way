@@ -7,7 +7,7 @@
 
 import UIKit
 
-// 코드로 화면 이동 및 데이터 전달
+// MARK: - 코드로 데이터 전달 및 화면 이동
 class FirstViewController: UIViewController {
     
     lazy var firstLable: UILabel = {
@@ -27,7 +27,7 @@ class FirstViewController: UIViewController {
         self.view.addSubview(firstLable)
         self.view.backgroundColor = .white
      
-        // 받은 데이터를 if let 바인딩으로 옵셔널을 벗긴다음 label에 업데이트
+        // 받은 데이터를 if let 바인딩으로 옵셔널을 벗긴 후 label에 업데이트
         if let safeStrData = strData {
             firstLable.text = safeStrData
         }

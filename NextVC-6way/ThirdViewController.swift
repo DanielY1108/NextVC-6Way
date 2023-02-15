@@ -7,25 +7,13 @@
 
 import UIKit
 
+// MARK: - 스토리보드의 간접세그로 연결 후 화면 이동 및 데이터 전달
 class ThirdViewController: UIViewController {
-
+    
     @IBOutlet weak var thirdLabel: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
