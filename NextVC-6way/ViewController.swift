@@ -43,7 +43,17 @@ class ViewController: UIViewController {
             
             // 현재 텍스트 필드에 적혀있는 텍스트를 thirdVC의 strData로 전달!
             thirdVC.strData = thirdTextField.text
+            
+        // MARK: - 스토리보드의 직접세그로 연결 후 화면이동 및 데이터 전달
+        // 직접적으로 연결했기 때문에 간접 세그에서 연견한 방식인 performSegue 호출없이 사용가능
+        } else if segue.identifier == "FourthVC" {
+            // UIViewController(구체적이지 않은 타입) --> ThirdViewController 타입 캐스팅
+            let fourthVC = segue.destination as! FourthViewController  // 종착지 설정
+            
+            // 현재 텍스트 필드에 적혀있는 텍스트를 fourthVC의 strData로 전달!
+            fourthVC.strData = fourthTextField.text
         }
+
     }
     
     // 스토리보드 직접세그로 연결 후 전달

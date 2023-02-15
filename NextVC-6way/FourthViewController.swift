@@ -7,25 +7,20 @@
 
 import UIKit
 
+// MARK: - 스토리보드의 직접세그로 연결 후 화면이동 및 데이터 전달
 class FourthViewController: UIViewController {
-
+    
     @IBOutlet weak var fourthLabel: UILabel!
-
+    
+    // 데이터를 받기 위해 변수를 생성해줘야 합니다.
+    var strData: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // 받은 데이터를 if let 바인딩으로 옵셔널을 벗긴 후 label에 업데이트
+        if let safeStrData = strData {
+            fourthLabel.text = safeStrData
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

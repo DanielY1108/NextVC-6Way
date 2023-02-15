@@ -115,6 +115,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="nextButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UCW-Qs-aFc"/>
+                                                    <segue destination="PVL-Xm-gml" kind="show" identifier="FourthVC" id="Ey4-we-6Od"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -325,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXl-Ql-3Ym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1917" y="-35"/>
+            <point key="canvasLocation" x="1917" y="-563"/>
         </scene>
         <!--Fourth View Controller-->
         <scene sceneID="Y24-rX-ShQ">
@@ -349,13 +350,14 @@
                             <constraint firstItem="iJ1-fT-Hmf" firstAttribute="centerX" secondItem="Y73-jx-0fb" secondAttribute="centerX" id="ile-kk-FMx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="KmA-yK-qhL"/>
                     <connections>
                         <outlet property="fourthLabel" destination="iJ1-fT-Hmf" id="aGa-ts-BmR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aT-Sm-Q40" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1917" y="718"/>
+            <point key="canvasLocation" x="1917" y="168"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SKK-8t-zCp">
