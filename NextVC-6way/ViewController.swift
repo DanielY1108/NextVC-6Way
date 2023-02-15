@@ -53,7 +53,6 @@ class ViewController: UIViewController {
             // 현재 텍스트 필드에 적혀있는 텍스트를 fourthVC의 strData로 전달!
             fourthVC.strData = fourthTextField.text
         }
-
     }
     
     // 스토리보드 직접세그로 연결 후 전달
@@ -64,8 +63,8 @@ class ViewController: UIViewController {
     @IBAction func nextButtonsTapped(_ sender: UIButton) {
         switch sender.tag {
             
-        // MARK: - 코드로 데이터 전달 및 화면이동
-        case Buttons.first.rawValue:
+        // MARK: - 코드로 프로퍼티를 통해 데이터 전달 및 화면이동
+        case 0:
             // FirstVC의 객체를 생성해줍니다.
             let firstVC = FirstViewController()
             // 현재 텍스트 필드에 적혀있는 텍스트를 FirstVC의 strData로 전달!
@@ -76,7 +75,7 @@ class ViewController: UIViewController {
             return
             
         // MARK: - 스토리보드로 뷰 컨트롤러를 만들어 화면이동 및 데이터 전달
-        case Buttons.second.rawValue:
+        case 1:
             // 정해준 스토리보드의 Identifier를 사용하여 ViewController를 불러와 줍시다.
             // 타입 캐스팅으로 UIViewController(구체적이지 않은 타입) -> SecondViewController 형변환을 해줘야 합니다.
             guard let secondVC = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as? SecondViewController else { return }
@@ -89,9 +88,27 @@ class ViewController: UIViewController {
             return
             
         // MARK: - 스토리보드의 간접세그로 연결 후 화면이동 및 데이터 전달
-        case Buttons.third.rawValue:
+        case 2:
             // 화면을 이동하기 위해 performSegue를 불러준다.
             performSegue(withIdentifier: "ThirdVC", sender: self)
+            return
+            
+
+        // MARK: - 클로저로 데이터 전달
+        // B -> A로 컨트롤러가 전환 시 클로저를 사용하여 데이터를 받아오고 행동을 정의함
+        // A -> B 이동은 직접 객체의 프로퍼티로 접근하여 데이터를 넘겨는게 훨씬 간단하다.
+        case 4:
+            let fifthtVC = FifthViewController()
+            // 현재 텍스트 필드에 적혀있는 텍스트를 FifthtVC의 strData로 전달!
+            fifthtVC.strData = fifthTextField.text
+            fifthtVC.modalPresentationStyle = .fullScreen
+            present(fifthtVC, animated: true)
+            
+            // 클로저는 어떠한 행동과 데이터를 담아서 전달시키므로 이와같이 text 및 color도 변경 가능
+            fifthtVC.closure = { text in
+                self.fifthTextField.text = text
+                self.fifthTextField.textColor = .red
+            }
             return
 
             

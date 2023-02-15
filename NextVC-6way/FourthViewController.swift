@@ -18,9 +18,7 @@ class FourthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 받은 데이터를 if let 바인딩으로 옵셔널을 벗긴 후 label에 업데이트
-        if let safeStrData = strData {
-            fourthLabel.text = safeStrData
-        }
+        // 받은 데이터를 label에 업데이트
+        fourthLabel.text = strData
     }
 }
