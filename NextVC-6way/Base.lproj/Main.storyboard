@@ -39,7 +39,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vQ4-Th-W3E"/>
+                                                    <action selector="nextButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jG8-ua-pme"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -64,7 +64,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="giw-IB-ZQb"/>
+                                                    <action selector="nextButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="adm-jm-LFu"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -89,7 +89,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mrc-ej-4oe"/>
+                                                    <action selector="nextButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Fv-hc-90t"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -114,7 +114,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ts-kz-04n"/>
+                                                    <action selector="nextButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UCW-Qs-aFc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -139,7 +139,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWh-wT-Z1g"/>
+                                                    <action selector="nextButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YXg-7U-3lG"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -164,7 +164,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pid-nC-szy"/>
+                                                    <action selector="nextButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7O-mK-XoQ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -189,7 +189,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Y3-eH-iTW"/>
+                                                    <action selector="nextButtonsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JXf-e0-HcE"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -244,8 +244,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hw-BJ-PyO">
-                                <rect key="frame" x="163" y="409" width="67" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="168.33333333333334" y="411.66666666666669" width="56.666666666666657" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -274,8 +274,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArH-It-2n5">
-                                <rect key="frame" x="163" y="409" width="67" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="168.33333333333334" y="411.66666666666669" width="56.666666666666657" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -304,8 +304,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8f-vS-aVL">
-                                <rect key="frame" x="163" y="409" width="67" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="168.33333333333334" y="411.66666666666669" width="56.666666666666657" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -334,8 +334,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ1-fT-Hmf">
-                                <rect key="frame" x="163" y="409" width="67" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="168.33333333333334" y="411.66666666666669" width="56.666666666666657" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

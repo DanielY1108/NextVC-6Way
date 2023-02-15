@@ -43,17 +43,22 @@ class ViewController: UIViewController {
     @IBAction func nextButtonsTapped(_ sender: UIButton) {
         switch sender.tag {
             
-        // 코드로 전달
+            // 코드로 전달
         case Buttons.first.rawValue:
-
+            let firstVC = FirstViewController()
+            // 현재 텍스트 필드에 적혀있는 텍스트를 firstVC의 strData로 전달!
+            firstVC.strData = firstTextField.text
+            // 네이게이션의 push를 통한 화면 전환
+            navigationController?.pushViewController(firstVC, animated: true)
             return
+            
         default: break
         }
     }
     
 }
-    
-    
+
+
 
 //    @IBAction func secondButtonTapped(_ sender: UIButton) {
 //
