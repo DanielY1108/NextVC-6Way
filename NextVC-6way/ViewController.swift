@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     // 세그웨이로 데이터를 전달하고 싶을땐 "prepare"함수를 이용해야 한다
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // MARK: - 스토리보드의 간접세그로 연결 후 화면 이동 및 데이터 전달
+        // MARK: - 스토리보드의 간접세그로 연결 후 화면이동 및 데이터 전달
         if segue.identifier == "ThirdVC" {
             // UIViewController(구체적이지 않은 타입) --> ThirdViewController 타입 캐스팅
             let thirdVC = segue.destination as! ThirdViewController  // 종착지 설정
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     @IBAction func nextButtonsTapped(_ sender: UIButton) {
         switch sender.tag {
             
-        // MARK: - 코드로 데이터 전달 및 화면 이동
+        // MARK: - 코드로 데이터 전달 및 화면이동
         case Buttons.first.rawValue:
             // FirstVC의 객체를 생성해줍니다.
             let firstVC = FirstViewController()
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
             navigationController?.pushViewController(firstVC, animated: true)
             return
             
-        // MARK: - 스토리보드로 뷰 컨트롤러를 만들어 화면 이동 및 데이터 전달
+        // MARK: - 스토리보드로 뷰 컨트롤러를 만들어 화면이동 및 데이터 전달
         case Buttons.second.rawValue:
             // 정해준 스토리보드의 Identifier를 사용하여 ViewController를 불러와 줍시다.
             // 타입 캐스팅으로 UIViewController(구체적이지 않은 타입) -> SecondViewController 형변환을 해줘야 합니다.
@@ -78,11 +78,10 @@ class ViewController: UIViewController {
             navigationController?.pushViewController(secondVC, animated: true)
             return
             
-        // MARK: - 스토리보드의 간접세그로 연결 후 화면 이동 및 데이터 전달
+        // MARK: - 스토리보드의 간접세그로 연결 후 화면이동 및 데이터 전달
         case Buttons.third.rawValue:
-            
+            // 화면을 이동하기 위해 performSegue를 불러준다.
             performSegue(withIdentifier: "ThirdVC", sender: self)
-            
             return
 
             

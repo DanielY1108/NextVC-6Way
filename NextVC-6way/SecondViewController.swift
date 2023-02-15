@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - 스토리보드로 뷰 컨트롤러를 만들어 화면 이동 및 데이터 전달
+// MARK: - 스토리보드로 뷰 컨트롤러를 만들어 화면이동 및 데이터 전달
 class SecondViewController: UIViewController {
     
     @IBOutlet weak var secondLabel: UILabel!

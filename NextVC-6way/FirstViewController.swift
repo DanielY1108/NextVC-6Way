@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - 코드로 데이터 전달 및 화면 이동
+// MARK: - 코드로 데이터 전달 및 화면이동
 class FirstViewController: UIViewController {
     
     lazy var firstLable: UILabel = {
