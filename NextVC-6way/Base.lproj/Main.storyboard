@@ -47,7 +47,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4Qo-7e-dnL">
                                         <rect key="frame" x="0.0" y="102" width="297.66666666666669" height="42.333333333333343"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="스토리보드로 VC 만들어 전달" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T4l-69-i4E">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="스토리보드로 VC를 만들어 전달" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T4l-69-i4E">
                                                 <rect key="frame" x="0.0" y="0.0" width="220" height="42.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="220" id="VPg-HZ-zOA"/>
@@ -214,12 +214,12 @@
                         <outlet property="seventhTextField" destination="oRw-QL-Hkg" id="QB2-32-ce8"/>
                         <outlet property="sixthTextField" destination="QMu-RS-1rH" id="rKu-fz-uIm"/>
                         <outlet property="thirdTextField" destination="wST-64-ynz" id="4n6-c5-XaJ"/>
-                        <segue destination="qyp-2w-W16" kind="presentation" id="okc-yH-T9z"/>
+                        <segue destination="qyp-2w-W16" kind="show" identifier="ThirdVC" id="gmw-Dq-lOO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999.23664122137404" y="-34.507042253521128"/>
+            <point key="canvasLocation" x="998" y="-35"/>
         </scene>
         <!--Sixth View Controller-->
         <scene sceneID="gCE-8a-0iE">
@@ -301,11 +301,11 @@
             <objects>
                 <viewController id="qyp-2w-W16" customClass="ThirdViewController" customModule="NextVC_6way" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IpY-aO-OOg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8f-vS-aVL">
-                                <rect key="frame" x="168.33333333333334" y="377.33333333333331" width="56.666666666666657" height="28.666666666666686"/>
+                                <rect key="frame" x="168.33333333333334" y="411.66666666666669" width="56.666666666666657" height="28.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -318,13 +318,14 @@
                             <constraint firstItem="v8f-vS-aVL" firstAttribute="centerX" secondItem="IpY-aO-OOg" secondAttribute="centerX" id="e7g-T4-uQg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Onk-62-XsK"/>
                     <connections>
                         <outlet property="thirdLabel" destination="v8f-vS-aVL" id="ngc-ll-Pdk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXl-Ql-3Ym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2024" y="-430"/>
+            <point key="canvasLocation" x="1917" y="-35"/>
         </scene>
         <!--Fourth View Controller-->
         <scene sceneID="Y24-rX-ShQ">
@@ -354,7 +355,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aT-Sm-Q40" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2024" y="288"/>
+            <point key="canvasLocation" x="1917" y="718"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SKK-8t-zCp">

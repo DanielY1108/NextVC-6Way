@@ -33,6 +33,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // 세그웨이로 데이터를 전달하고 싶을땐 "prepare"함수를 이용해야 한다
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // MARK: - 스토리보드의 간접세그로 연결 후 화면 이동 및 데이터 전달
+        if segue.identifier == "ThirdVC" {
+            // UIViewController(구체적이지 않은 타입) --> ThirdViewController 타입 캐스팅
+            let thirdVC = segue.destination as! ThirdViewController  // 종착지 설정
+            
+            // 현재 텍스트 필드에 적혀있는 텍스트를 thirdVC의 strData로 전달!
+            thirdVC.strData = thirdTextField.text
+        }
+    }
+    
     // 스토리보드 직접세그로 연결 후 전달
     // 클로저로 전달
     // 노티피케이션 전달
@@ -67,6 +80,9 @@ class ViewController: UIViewController {
             
         // MARK: - 스토리보드의 간접세그로 연결 후 화면 이동 및 데이터 전달
         case Buttons.third.rawValue:
+            
+            performSegue(withIdentifier: "ThirdVC", sender: self)
+            
             return
 
             
