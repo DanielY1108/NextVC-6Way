@@ -50,6 +50,6 @@ class SixthViewController: UIViewController {
         // 알람을 보내서 작업을 수행하라고 지시하는 시점이다.
         NotificationCenter.default.post(name: Notification.Name("Notification"), object: text)
         
-        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
 }

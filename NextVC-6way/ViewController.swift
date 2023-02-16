@@ -17,7 +17,7 @@ enum Buttons: Int {
     case seventh
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SevenViewControllerDelegate {
     
     @IBOutlet weak var firstTextField: UITextField!
     @IBOutlet weak var secondTextField: UITextField!
@@ -115,13 +115,23 @@ class ViewController: UIViewController {
         case 5:
             let sixthVC = SixthViewController()
             sixthVC.strData = sixthTextField.text ?? ""
-            
+            sixthVC.modalPresentationStyle = .fullScreen
             // addObserver는 일종에 관제소다.
             // Post로 알람이 오게 되면 관제소에서 관측을하여 받은 데이터를 갖고 notificationButtonTapped을 통해 작업을 수행시킨다.
             // 즉, 관측소에서 알람을 받으면 정의된 함수를 실행 시켜줌.
             NotificationCenter.default.addObserver(self, selector: #selector(notificationButtonTapped(_:)), name: NSNotification.Name("Notification"), object: nil)
             
-            navigationController?.pushViewController(sixthVC, animated: true)
+            present(sixthVC, animated: true)
+        
+        // MARK: - 델리게이트 전달
+        case 6:
+            let seventhVC = SeventhViewController()
+            seventhVC.strData = seventhTextField.text ?? ""
+            seventhVC.modalPresentationStyle = .fullScreen
+            // ⭐️ 대리자를 현재 뷰컨트롤러로 지정해줍니다.
+            seventhVC.delegate = self
+            
+            present(seventhVC, animated: true)
         default: break
         }
     }
@@ -133,31 +143,11 @@ class ViewController: UIViewController {
         sixthTextField.text = notificationData
         sixthTextField.textColor = .red
     }
+    
+    // 델리게이트 실행 시 데이터를 갖고 작업을 수행
+    func getTextFieldData(_ viewController: SeventhViewController, data: String) {
+        seventhTextField.text = data
+        seventhTextField.textColor = .red
+    }
 }
-
-
-
-//    @IBAction func secondButtonTapped(_ sender: UIButton) {
-//
-//    }
-//
-//    @IBAction func thirdButtonTapped(_ sender: UIButton) {
-//
-//    }
-//
-//    @IBAction func fourthButtonTapped(_ sender: UIButton) {
-//
-//    }
-//
-//    @IBAction func fifthButtonTapped(_ sender: UIButton) {
-//
-//    }
-//
-//    @IBAction func sixthButtonTapped(_ sender: UIButton) {
-//
-//    }
-//
-//    @IBAction func delegateButtonTapped(_ sender: UIButton) {
-//
-//    }
 
