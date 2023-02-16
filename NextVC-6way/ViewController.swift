@@ -95,7 +95,7 @@ class ViewController: UIViewController {
             
 
         // MARK: - 클로저로 데이터 전달
-        // B -> A로 컨트롤러가 전환 시 클로저를 사용하여 데이터를 받아오고 행동을 정의함
+        // B -> A로 컨트롤러를 전환 시 클로저를 사용하여 데이터를 받아오고 행동을 정의함
         // A -> B 이동은 직접 객체의 프로퍼티로 접근하여 데이터를 넘겨는게 훨씬 간단하다.
         case 4:
             let fifthtVC = FifthViewController()
@@ -110,12 +110,29 @@ class ViewController: UIViewController {
                 self.fifthTextField.textColor = .red
             }
             return
-
             
+        // MARK: - 노티피케이션 전달
+        case 5:
+            let sixthVC = SixthViewController()
+            sixthVC.strData = sixthTextField.text ?? ""
+            
+            // addObserver는 일종에 관제소다.
+            // Post로 알람이 오게 되면 관제소에서 관측을하여 받은 데이터를 갖고 notificationButtonTapped을 통해 작업을 수행시킨다.
+            // 즉, 관측소에서 알람을 받으면 정의된 함수를 실행 시켜줌.
+            NotificationCenter.default.addObserver(self, selector: #selector(notificationButtonTapped(_:)), name: NSNotification.Name("Notification"), object: nil)
+            
+            navigationController?.pushViewController(sixthVC, animated: true)
         default: break
         }
     }
     
+    // #selector로 관제소에서 post를 관측 시 이 동작을 실행시킨다.
+    @objc func notificationButtonTapped(_ notification: Notification) {
+        let notificationData = notification.object as? String
+        
+        sixthTextField.text = notificationData
+        sixthTextField.textColor = .red
+    }
 }
 
 
